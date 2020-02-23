@@ -1,15 +1,16 @@
-﻿using GUIAutomation.HelperClasses;
+﻿using GUIAutomation.BaseClass;
+using GUIAutomation.HelperClasses;
 using GUIAutomation.Pages;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Threading;
 
 namespace GUIAutomation
 {
-    [TestClass]
-    public class UnitTest1
+    [TestFixture]
+    public class UnitTest1 : Base
     {
         
-        [TestMethod]
+        [Test]
         public void TestMethod1()
         {
             //Navigate to Amazon Home Page

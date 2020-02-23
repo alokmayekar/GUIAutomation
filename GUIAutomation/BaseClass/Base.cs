@@ -1,7 +1,6 @@
 ﻿using GUIAutomation.CommonObjects;
 using GUIAutomation.Configurations;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
+using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
@@ -10,11 +9,10 @@ using System.Threading;
 
 namespace GUIAutomation.BaseClass
 {
-    [TestClass]
     public class Base
     {
-        [AssemblyInitialize]
-        public static void InitializeWebDriver(TestContext tc)
+        [SetUp]
+        public static void InitializeWebDriver()
         {
             CommonRepository.Config = new AppConfigReader();
             switch (CommonRepository.Config.GetBrowser())
@@ -46,7 +44,7 @@ namespace GUIAutomation.BaseClass
             return chromeOptions;
         }
 
-        [AssemblyCleanup]
+        [TearDown]
         public static void TearDownWebDriver()
         {
             Thread.Sleep(2000);
