@@ -24,7 +24,7 @@ namespace GUIAutomation
             homePage.ClickSearchIcon();
 
             //Take screenshot
-            GenericHelper.TakeScreenshot();
+            //GenericHelper.TakeScreenshot();
         }
     }
 }
