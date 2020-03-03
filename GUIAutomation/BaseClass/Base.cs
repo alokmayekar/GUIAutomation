@@ -41,6 +41,7 @@ namespace GUIAutomation.BaseClass
         {
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.AddArgument("start-maximized");
+            chromeOptions.AddArgument("--disable-gpu");
             return chromeOptions;
         }
 
