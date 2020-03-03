@@ -34,7 +34,7 @@ namespace GUIAutomation.BaseClass
             }
             CommonRepository.UserName = CommonRepository.Config.GetUserName();
             CommonRepository.Password = CommonRepository.Config.GetPassword();
-            CommonRepository.Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(5000);
+            CommonRepository.Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(2000);
         }
 
         public static ChromeOptions ChromeDriverOptions()
