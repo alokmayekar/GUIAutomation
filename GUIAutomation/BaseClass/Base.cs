@@ -42,6 +42,7 @@ namespace GUIAutomation.BaseClass
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.AddArgument("start-maximized");
             chromeOptions.AddArgument("--disable-gpu");
+            chromeOptions.PageLoadStrategy = OpenQA.Selenium.PageLoadStrategy.Eager;
             return chromeOptions;
         }
 
