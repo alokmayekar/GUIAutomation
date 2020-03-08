@@ -18,7 +18,7 @@ namespace GUIAutomation.BaseClass
             switch (CommonRepository.Config.GetBrowser())
             {
                 case BrowserType.Chrome:
-                    CommonRepository.Driver = new ChromeDriver(ChromeDriverOptions());
+                    CommonRepository.Driver = new ChromeDriver(@"E:\Chrome79", ChromeDriverOptions());
                     break;
                 case BrowserType.Firefox:
                     CommonRepository.Driver = new FirefoxDriver();
