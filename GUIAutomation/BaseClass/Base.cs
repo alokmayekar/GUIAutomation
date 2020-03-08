@@ -14,11 +14,13 @@ namespace GUIAutomation.BaseClass
         [SetUp]
         public static void InitializeWebDriver()
         {
+            var homeDir = AppDomain.CurrentDomain.BaseDirectory;
+            var chromeDir = homeDir.Substring(0,homeDir.IndexOf("bin")) + @"ChromeDriver\";
             CommonRepository.Config = new AppConfigReader();
             switch (CommonRepository.Config.GetBrowser())
             {
                 case BrowserType.Chrome:
-                    CommonRepository.Driver = new ChromeDriver(@"E:\Chrome79", ChromeDriverOptions());
+                    CommonRepository.Driver = new ChromeDriver(chromeDir, ChromeDriverOptions());
                     break;
                 case BrowserType.Firefox:
                     CommonRepository.Driver = new FirefoxDriver();
